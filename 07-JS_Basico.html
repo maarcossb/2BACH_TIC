@@ -1,0 +1,36 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+ <HEAD>
+  <TITLE> 07-JS_Basico.html </TITLE>
+  <META NAME="Generator" CONTENT="EditPlus">
+  <META NAME="Author" CONTENT="">
+  <META NAME="Keywords" CONTENT="">
+  <META NAME="Description" CONTENT="">
+  <script language="JavaScript">
+	function aumentar()
+	{
+	foto1.width=foto1.width+30;
+	if(foto1.width > 500)
+		{
+		window.alert("No se puede aumentar más");
+		}
+	}
+
+	function disminuir()
+	{
+	foto1.width=foto1.width-30;
+	if(foto1.width < 50)
+		{
+		window.alert("No se puede disminuir más");
+		}
+	}
+  </script>
+
+ </HEAD>
+
+ <BODY>
+	<input type="button" value="+" onclick="aumentar()"> <input type="button"  onclick="disminuir()"value="-"><br>
+	<img src="./Imagenes/imagen_1.jfif" name="foto1" id="foto1">
+
+ </BODY>
+</HTML>

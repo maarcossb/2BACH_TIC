@@ -1,0 +1,87 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+ <HEAD>
+  <TITLE> 06-Formularios.html </TITLE>
+  <META NAME="Generator" CONTENT="EditPlus">
+  <META NAME="Author" CONTENT="">
+  <META NAME="Keywords" CONTENT="">
+  <META NAME="Description" CONTENT="">
+  <script language="JavaScript">
+	function mostrar()
+	{
+		if(datos.ciudad.value=="Sevilla")
+		{
+			window.alert("Eres andaluz");
+		}
+		if(datos.ciudad.value=="Zaragoza" || datos.ciudad.value=="Huesca" || datos.ciudad.value=="Teruel")
+		{
+			window.alert("Eres maño");
+		}
+		
+	}
+ 
+  </script>
+ </HEAD>
+ <BODY>
+ <form name="datos" id="datos" action="01-Basico.html" method="">
+  <TABLE align="center" border="1" width="50%" cellpadding="5"> 
+  <TR>
+	<TD align="center"colspan="2" bgcolor="#CC3300"><h2> Datos personales </h2></TD>
+  </TR>
+  <TR>
+	<TD>Nombre y Apellidos</TD>
+	<TD><input type="text" id="nombre" name="nombre" size="40" maxlength="40" value="Marcos Burgos" readonly></TD>
+  </TR>
+  <TR>
+	<TD>Clave</TD>
+	<TD><input type="password" id="clave" name="clave" size="12" maxlength="10" placeholder="Solo números" required><input type="button" value="Ver" onmouseover="clave.type='text'" onmouseout="clave.type='password'"></TD>
+  </TR>
+  <TR>
+	<TD>email</TD>
+	<TD><input type="email" id="correo" name="correo" size="50" maxlength="60"></TD>
+  </TR>
+  <TR>
+	<TD>Fecha Nacimiento</TD>
+	<TD><input type="date" id="fecha" name="fecha"></TD>
+  </TR>
+  <TR>
+	<TD>Ciudad</TD>
+	<TD>
+		<select id="ciudad" name="ciudad" onchange="mostrar()">
+			<option value="">Elige una ciudad
+			<option value="Zaragoza">Zaragoza
+			<option value="Huesca">Huesca
+			<option value="Teruel">Teruel
+			<option value="Madrid">Madrid
+			<option value="Sevilla" selected>Sevilla
+		</select>
+	</TD>
+  </TR>
+  <TR>
+	<TD>Hobbies</TD>
+	<TD>
+	Deportes <input type="checkbox" name="hobby" id="hobby" value="Deportes">
+	Cine <input type="checkbox" name="hobby" id="hobby" value="Cine">
+	Música <input type="checkbox" name="hobby" id="hobby" value="Música">
+	Viajar <input type="checkbox" name="hobby" id="hobby" value="Viajar">
+	</TD>
+  </TR>
+  <TR>
+	<TD>Sexo</TD>
+	<TD>
+	Masculino <input type="radio" name="sexo" id="sexo" value="M">
+	Femenino <input type="radio" name="sexo" id="sexo" value="F">
+	</TD>
+  </TR>
+  <TR>
+	<TD>Sube tu foto</TD>
+	<TD> <input type="file" name="foto" id="foto" value="foto">
+	</TD>
+  </TR>
+  <TR>
+	<TD colspan="2" align="center"><input type="submit" value="Enviar"><input type="reset" value="Borrar"></TD>
+  </TR>
+  </TABLE>
+  </form>
+ </BODY>
+</HTML>
